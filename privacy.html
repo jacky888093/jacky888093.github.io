@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Jacky YouTube Studio handles Google OAuth and video data.">
+  <title>Privacy Policy | Jacky YouTube Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell masthead">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Jacky YouTube Studio</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div></header>
+  <main id="main" class="shell document">
+    <header><h1>Privacy Policy</h1><p class="intro">How the local application and this public website handle information.</p></header>
+    <section><h2>Google authorization and YouTube</h2><p>The local application uses Google OAuth to authorize its use of YouTube API Services. It requests these scopes:</p>
+<dl class="scopes"><div><dt><code>youtube.readonly</code></dt><dd>Verify the authorized YouTube channel and check the status of a submitted video, including its privacy and schedule settings.</dd></div>
+<div><dt><code>youtube.upload</code></dt><dd>Send a selected video and its publishing details to YouTube when uploading is enabled and you explicitly approve the submission.</dd></div></dl>
+<p>The app uses OAuth credentials to authenticate requests to Google. During an authorized submission, YouTube receives the selected video and publishing details such as its title, description, audience setting, and scheduled release time. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p></section>
+    <section><h2>Local storage and optional tools</h2><p>OAuth credentials are stored in local files. Video paths, metadata, drafts, series, and publishing history are stored in a local SQLite database and related local files. Database backups, optional drafting task files, and extracted frames stay on the computer unless you move or share them.</p>
+<p>If you choose to share a drafting task with Codex, that service handles the information and frames you share. The local app does not send drafting tasks to Codex automatically.</p>
+<p>The developer does not sell user data.</p></section>
+    <section><h2>Revoke access and manage local data</h2><p>Open <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>, select the app, and remove its access. Revocation does not remove local records, backups, or videos already on YouTube. You can delete individual library records in the app and manage local backup files on your computer. Deleting a library record leaves the source video in place.</p></section>
+    <section><h2>This public website</h2><p>These pages have no analytics, tracking scripts, or sign-in forms. GitHub Pages hosts the site and logs visitor IP addresses for security purposes. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p></section>
+    <section><h2>Contact the developer</h2><p>For privacy questions or data requests, contact the developer through the <a href="https://github.com/jacky888093">GitHub profile</a> or open an issue in the <a href="https://github.com/jacky888093/jacky888093.github.io/issues">public website repository</a> if Issues is enabled. Issues are public. Keep credentials, private video information, and personal data out of issue posts.</p></section>
+  </main>
+  <footer class="site-footer"><div class="shell masthead">
+    <span>Jacky YouTube Studio</span><a href="https://github.com/jacky888093">Developer on GitHub</a>
+  </div></footer>
+</body>
+</html>

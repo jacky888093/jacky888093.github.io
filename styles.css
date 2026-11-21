@@ -1,0 +1,63 @@
+:root {
+  color-scheme: light;
+  --ink: #182539;
+  --muted: #455468;
+  --paper: #fffefd;
+  --ground: #f6f4ef;
+  --line: #dfded7;
+  --accent: #174a41;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; color: var(--ink); background: var(--ground); font: 1rem/1.65 system-ui, "Segoe UI", sans-serif; }
+main { flex: 1; }
+a { color: var(--accent); text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: .13em; }
+:focus-visible { outline: 3px solid #87622a; outline-offset: 4px; }
+.shell { width: min(calc(100% - 3rem), 70rem); margin-inline: auto; }
+.skip { position: absolute; left: 1rem; top: 1rem; padding: .5rem .75rem; background: white; transform: translateY(-200%); }
+.skip:focus { transform: none; z-index: 1; }
+.site-header,.site-footer { background: var(--paper); }
+.site-header { border-bottom: 1px solid var(--line); }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.masthead { min-height: 4rem; display: flex; align-items: center; justify-content: space-between; gap: .5rem 1rem; padding-block: .75rem; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: 760; color: var(--ink); text-decoration: none; letter-spacing: -.025em; }
+.mark { display: grid; place-items: center; background: var(--accent); width: 1.7rem; height: 1.7rem; border-radius: .5rem; }
+.mark::before { content: ""; width: .64rem; height: .72rem; background: white; clip-path: polygon(0 0,100% 50%,0 100%); }
+nav { display: flex; flex-wrap: wrap; gap: .25rem; }
+nav a { display: block; padding: .35rem .6rem; border-radius: .4rem; color: var(--muted); text-decoration: none; font-size: .89rem; font-weight: 600; }
+nav a:hover,nav a[aria-current] { background: #e6eee9; color: var(--accent); }
+.home { padding-block: clamp(2rem,6vw,5rem) 3rem; }
+.hero { padding: clamp(2rem,7vw,5rem); border: 1px solid #cfddd6; border-radius: 1.3rem; background: linear-gradient(120deg,#eff4ec 15%,#d7e8df); }
+.eyebrow { margin: 0 0 1rem; color: var(--accent); font-size: .75rem; font-weight: 760; letter-spacing: .14em; text-transform: uppercase; }
+h1,h2,p { margin: 0; }
+h1 { font-size: clamp(2.3rem,6.45vw,5.4rem); line-height: 1; font-weight: 780; letter-spacing: -.061em; overflow-wrap: break-word; }
+.intro { max-width: 39rem; margin-top: 1.1rem; color: var(--muted); font-size: clamp(1.07rem,2.1vw,1.29rem); }
+.buttons { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; }
+.button { padding: .62rem .9rem; border: 1px solid transparent; border-radius: .55rem; background: var(--accent); color: white; text-decoration: none; font-weight: 650; }
+.button:hover { background: #103a33; }
+.button.secondary { background: var(--paper); color: var(--accent); border-color: #a9c0b3; }
+.button.secondary:hover { background: #eaf2ec; }
+.features { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; margin-block: .85rem; }
+.features article { padding: 1.25rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--paper); }
+.features h2 { font-size: 1.12rem; letter-spacing: -.02em; }
+.features p,.note { color: var(--muted); }
+.features p { margin-top: .35rem; }
+.note { margin: 1.15rem .2rem 0; font-size: .93rem; }
+.document { max-width: 49rem; padding-block: clamp(2.4rem,6vw,4.6rem) 4rem; }
+.document h1 { font-size: clamp(2.3rem,6vw,4.1rem); }
+.document header { padding-bottom: 1.8rem; border-bottom: 1px solid var(--line); }
+.document section { margin-top: 1.55rem; }
+.document h2 { font-size: clamp(1.24rem,3vw,1.49rem); line-height: 1.25; letter-spacing: -.025em; }
+.document section p { margin-top: .6rem; }
+.scopes { display: grid; gap: .55rem; margin-block: .8rem; }
+.scopes div { padding: .65rem .85rem; border: 1px solid var(--line); border-radius: .55rem; background: var(--paper); }
+.scopes dt { font-weight: 700; color: var(--accent); }
+.scopes dd { margin: .12rem 0 0; color: var(--muted); }
+@media(max-width: 42rem) {
+  .shell { width: calc(100% - 2rem); }
+  .masthead { flex-wrap: wrap; }
+  .masthead nav { margin-left: -.55rem; }
+  .hero { padding: 1.6rem; }
+  .features { grid-template-columns: 1fr; }
+  .desktop { display: none; }
+}
